@@ -50,22 +50,26 @@ While this configuration is widely used in industry for flexibility and redundan
 ---
 
 ## 🚀 Future Work
-- Adaptive control strategies for low‑load operation.  
-- State estimation to improve decision‑making.  
-- Migration towards **Model Predictive Control (MPC)** for wide‑range robustness.  
-
+- Develop **adaptive control strategies** for reliable low‑load operation.  
+- Implement **state estimation** techniques to enhance decision‑making.  
+- Explore migration towards **Model Predictive Control (MPC)** for improved robustness across wide operating ranges.  
 
 ---
 
-How to run simulations:
-The two important files found in each folder are the Init_two_Boilers.m/INIT_BOILER.m and Single_Boiler_Model.slx/Multi_Boiler_Common_header.slx.
+## 🖥️ How to Run Simulations
 
-You need to first open both the .m and the .slx files first.
-The run the .m init file for that respective .slx 
-e.g if I want to run the Single_Boiler_Model.slx simulation, i need to first run the INIT_BOILERtp initialise and assign the model parameters.
-From there you should be good to go.
----
+Each project folder contains two key files:
 
+- **Initialization scripts**: `Init_two_Boilers.m` or `INIT_BOILER.m`  
+- **Simulink models**: `Single_Boiler_Model.slx` or `Multi_Boiler_Common_header.slx`  
+
+### Steps:
+1. Open both the `.m` initialization file and the corresponding `.slx` Simulink model.  
+2. Run the initialization script to assign model parameters.  
+   - Example: To run `Single_Boiler_Model.slx`, first execute `INIT_BOILER.m`.  
+3. Once initialized, run the Simulink model.  
+
+✅ After these steps, the simulation should be ready to execute.
 ## 👤 Author
 **Zwivhuya Ndou**  
 Final Year Project – BSc Electrical & Computer Engineering  
