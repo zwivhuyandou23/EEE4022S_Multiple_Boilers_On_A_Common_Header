@@ -1,22 +1,22 @@
 # Multiple Boilers on a Common Header
 
 ## 📖 Project Overview
-This repository contains the final year project of **Zwivhuya Ndou** for the Department of Electrical Engineering, University of Cape Town.  
-The project investigates the **modelling and coordinated control of multiple saturated drum boilers connected to a common steam header**.  
+This repository contains my final year project for the Department of Electrical Engineering, University of Cape Town.  
+The project investigates Multiple boilers on a common header.  
 
-While this configuration is widely used in industry for flexibility and redundancy, it introduces strong dynamic coupling: a change in one boiler’s operation directly affects the header pressure and the other boilers. Without proper coordination, this can lead to **uneven load sharing, oscillations, and instability**.
+While this configuration is widely used in industry for flexibility and redundancy, it introduces strong dynamic coupling: a change in one boiler’s operation directly affects the header pressure and the other boilers. Without proper coordination, this can lead to uneven load sharing, oscillations, and instability.
 
 ---
 
 ## 🎯 Objectives
-- Develop a **dynamic model** of two drum boilers and a common header in MATLAB/Simulink.  
-- Capture key thermohydraulic phenomena such as **shrink and swell** and **pressure–flow coupling**.  
-- Design and implement a **cascade control architecture** that ensures:
+- Develop a dynamic model of two drum boilers and a common header in MATLAB/Simulink.  
+- Capture key thermohydraulic phenomena such as shrink and swell and pressure–flow coupling.  
+- Design and implement a cascade control architecture that ensures:
   - Stable header pressure  
   - Safe drum water levels  
   - Fair load sharing between boilers  
 - Validate the control system under different load conditions (100%, 80%, 20%).  
-- Demonstrate feasibility for **PLC implementation** using IEC 61131 standards.
+- Demonstrate feasibility for PLC implementation using IEC 61131 standards.
 
 ---
 
@@ -55,6 +55,15 @@ While this configuration is widely used in industry for flexibility and redundan
 - Migration towards **Model Predictive Control (MPC)** for wide‑range robustness.  
 
 
+---
+
+How to run simulations:
+The two important files found in each folder are the Init_two_Boilers.m/INIT_BOILER.m and Single_Boiler_Model.slx/Multi_Boiler_Common_header.slx.
+
+You need to first open both the .m and the .slx files first.
+The run the .m init file for that respective .slx 
+e.g if I want to run the Single_Boiler_Model.slx simulation, i need to first run the INIT_BOILERtp initialise and assign the model parameters.
+From there you should be good to go.
 ---
 
 ## 👤 Author
