@@ -1,0 +1,14 @@
+# MATLAB / Simulink auto-generated files
+slprj/
+mex/
+*.asv
+*.autosave
+*.tmw
+*.mdl.r*
+*.slxc
+*.mex*
+exit()
+
+Exit
+
+

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6.xsd">
+  <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2025-10-12T20:06:37"/>
+  <contentHeader name="Unnamed" modificationDateTime="2025-10-13T07:20:51">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="10" y="10"/>
+      </fbd>
+      <ld>
+        <scaling x="10" y="10"/>
+      </ld>
+      <sfc>
+        <scaling x="10" y="10"/>
+      </sfc>
+    </coordinateInfo>
+  </contentHeader>
+  <types>
+    <dataTypes/>
+    <pous>
+      <pou name="Main_Program" pouType="program">
+        <interface>
+          <inputVars>
+            <variable name="myPI">
+              <type>
+                <derived name="PID"/>
+              </type>
+            </variable>
+          </inputVars>
+          <externalVars>
+            <variable name="CV">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+            <variable name="SP">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+            <variable name="PV">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+          </externalVars>
+          <localVars>
+            <variable name="error">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+            <variable name="Ki">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+            <variable name="Kp">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+            <variable name="I_accumulator">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+            <variable name="Ts">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+            <variable name="I_accumulator1">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[Kp := 50.0;
+Ki := 0.0001;
+Ts := 0.02;
+
+error := SP - PV;
+I_accumulator := I_accumulator + Ki * error * Ts;
+CV := Kp * error + I_accumulator;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations>
+      <configuration name="Config0">
+        <resource name="Res0">
+          <task name="task0" priority="0" interval="T#20ms">
+            <pouInstance name="instance0" typeName="Main_Program"/>
+          </task>
+          <globalVars>
+            <variable name="CV">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+            <variable name="PV">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+            <variable name="SP">
+              <type>
+                <REAL/>
+              </type>
+            </variable>
+          </globalVars>
+        </resource>
+      </configuration>
+    </configurations>
+  </instances>
+</project>
